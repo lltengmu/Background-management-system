@@ -9,6 +9,7 @@
 <body>
     
     <p>这是 {{ $users[0]->username }} 用户</p>
+    <p>{{ $arr[0] }}</p>
     
     <script>
         var app = @json($users);
