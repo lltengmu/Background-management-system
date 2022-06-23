@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('login');
 });
 // Route::get('/index',function(){
 //     return 'hello,laravel';
@@ -154,15 +154,15 @@ Route::get('/', function () {
 //             'comments' => 'cid'
 //         ]);
 
-Route::get('task/form',[TaskController::class ,'form']);
+// Route::get('task/form',[TaskController::class ,'form']);
 
-Route::any('task/getform',function(){
-    return Request::method();
-});
-//去除部分请求不需要表单验证
-Route::any('api/getform',function(){
-    return Request::method();
-});
+// Route::any('task/getform',function(){
+//     return Request::method();
+// });
+// //去除部分请求不需要表单验证
+// Route::any('api/getform',function(){
+//     return Request::method();
+// });
 
-//路由绑定操作数据库的类
-Route::get('data',[DataController::class,'index']);
+// //路由绑定操作数据库的类
+// Route::get('data',[DataController::class,'index']);

@@ -231,5 +231,10 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
     ],
+    /*
+    *资源根目录
+    *
+    */
+    "assets_path" => "/public",
 
 ];
