@@ -45,7 +45,7 @@ class IndexController extends Controller
               ->withErrors("用户不存在")
               ->withInput();;
         }
-        // return view('admin/home');
+        return view('admin/home');
         // $user = DB::table('admin')->where('email','=',$message['email'])->get();
         
         // return $request->ip();
