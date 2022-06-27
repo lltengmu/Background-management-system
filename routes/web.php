@@ -3,6 +3,7 @@
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\DataController;
+use App\Http\Controllers\IndexController;
 use App\Http\Controllers\OneController;
 use App\Http\Controllers\TaskController;
 use Illuminate\Support\Facades\Request;
@@ -19,9 +20,26 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('login');
-});
+Route::get('/',[IndexController::class,'index']);
+Route::get('/register',[IndexController::class,'register']);
+Route::POST('/login',[IndexController::class,'login']);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Route::get('/index',function(){
 //     return 'hello,laravel';
 // });
