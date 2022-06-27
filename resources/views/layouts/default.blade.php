@@ -12,6 +12,7 @@
     <link href="{{ URL::asset('focus-premium/themes/focus-premium/focus/css/style.css') }}" rel="stylesheet">
     <!-- Required validate -->
     <script src="{{ URL::asset('js/common/validate.js') }}"></script>
+    <script src="{{ URL::asset('layui/layui/layui.js') }}"></script>
 
 </head>
 

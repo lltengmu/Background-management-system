@@ -15,6 +15,7 @@
                                 <div class="auth-form">
                                     <h4 class="text-center mb-4">Sign in your account</h4>
                                     <form action="{{ URL('/login') }}" method="POST">
+                                        @csrf
                                         <div class="form-group">
                                             <label><strong>Email</strong></label>
                                             <input type="email" name="email" class="form-control" value="">
@@ -49,8 +50,17 @@
             </div>
         </div>
     </div>
-    <script>
-        
-    </script>
+    
+    @if ($errors->any())
+        @foreach ($errors->all() as $error) 
+        <script>
+            layui.use('layer', function(){
+                var layer = layui.layer;
+                layer.msg('{{ $error }}');
+            });
+        </script>
+        @endforeach
+    @endif
+    
 @endsection
 

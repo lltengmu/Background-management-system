@@ -22,7 +22,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/',[IndexController::class,'index']);
 Route::get('/register',[IndexController::class,'register']);
-Route::POST('/login',[IndexController::class,'login']);
+Route::post('/login',[IndexController::class,'login']);
+// Route::get('index/login',[IndexController::class,'index']);
 
 
 
