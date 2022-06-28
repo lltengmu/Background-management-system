@@ -1,0 +1,16 @@
+{
+  "id": "3488849",
+  "name": "loansystem",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "979220",
+      "name": "多语言",
+      "font_class": "duoyuyan",
+      "unicode": "e618",
+      "unicode_decimal": 58904
+    }
+  ]
+}
