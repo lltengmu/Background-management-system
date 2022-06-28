@@ -51,7 +51,7 @@
                                     </div>
                                     <span class="notify-time">3:20 am</span>
                                 </li>
-                                <li class="media dropdown-item">
+                                {{--<li class="media dropdown-item">
                                     <span class="primary">
                                         <i class="ti-shopping-cart"></i>
                                     </span>
@@ -89,7 +89,7 @@
                                         </a>
                                     </div>
                                     <span class="notify-time">3:20 am</span>
-                                </li>
+                                </li>--}}
                             </ul>
                             <a class="all-notification" href="#">See all notifications <i class="ti-arrow-right"></i></a>
                         </div>
@@ -99,18 +99,42 @@
                             <i class="mdi mdi-account"></i>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
+                            @if(App::isLocale('zh'))
                             <a href="./app-profile.html" class="dropdown-item">
                                 <i class="icon-user"></i>
-                                <span class="ml-2">Profile </span>
+                                <span class="ml-2">{{ __('zh.Profile') }} </span>
+                            </a>
+                            <a href="{{ URL('/changelang') }}" class="dropdown-item">
+                                <i class="iconfont icon-duoyuyan"></i>
+                                <span class="ml-2">{{ __('zh.chinese') }} </span>
                             </a>
                             <a href="./email-inbox.html" class="dropdown-item">
                                 <i class="icon-envelope-open"></i>
-                                <span class="ml-2">Inbox </span>
+                                <span class="ml-2">{{ __('zh.Inbox') }} </span>
                             </a>
                             <a href="./page-login.html" class="dropdown-item">
                                 <i class="icon-key"></i>
-                                <span class="ml-2">Logout </span>
+                                <span class="ml-2">{{ __('zh.Logout') }} </span>
                             </a>
+                            @endif
+                            @if(App::isLocale('en'))
+                            <a href="./app-profile.html" class="dropdown-item">
+                                <i class="icon-user"></i>
+                                <span class="ml-2">{{ __('en.Profile') }} </span>
+                            </a>
+                            <a href="{{ URL('/changelang') }}" class="dropdown-item">
+                                <i class="iconfont icon-duoyuyan"></i>
+                                <span class="ml-2">{{ __('en.chinese') }} </span>
+                            </a>
+                            <a href="./email-inbox.html" class="dropdown-item">
+                                <i class="icon-envelope-open"></i>
+                                <span class="ml-2">{{ __('en.Inbox') }} </span>
+                            </a>
+                            <a href="./page-login.html" class="dropdown-item">
+                                <i class="icon-key"></i>
+                                <span class="ml-2">{{ __('en.Logout') }} </span>
+                            </a>
+                            @endif
                         </div>
                     </li>
                 </ul>
@@ -118,6 +142,4 @@
         </nav>
     </div>
 </div>
-        <!--**********************************
-            Header end ti-comment-alt
-        ***********************************-->
+<!--**********************************Header end ti-comment-alt***********************************-->

@@ -14,9 +14,14 @@
     <link rel="stylesheet" href="{{ URL::asset('focus-premium/themes/focus-premium/focus/vendor/owl-carousel/css/owl.theme.default.min.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('focus-premium/themes/focus-premium/focus/vendor/jqvmap/css/jqvmap.min.css') }}">
     <link href="{{ URL::asset('focus-premium/themes/focus-premium/focus/css/style.css') }}" rel="stylesheet">
+    <!-- iconfont -->
+    <link rel="stylesheet" href="{{ URL::asset('font_3488849_yfroy1i6sks/iconfont.css') }}">
     <style>
         .quixnav .metismenu .has-arrow:after {
             display:none;
+        }
+        .content-body{
+            min-height:100%;
         }
     </style>
 
