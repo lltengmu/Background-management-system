@@ -4,6 +4,7 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\DataController;
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\OneController;
 use App\Http\Controllers\TaskController;
 use Illuminate\Support\Facades\Request;
@@ -22,8 +23,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/',[IndexController::class,'index']);
 Route::get('/register',[IndexController::class,'register']);
-Route::post('/login',[IndexController::class,'login']);
-// Route::get('index/login',[IndexController::class,'index']);
+Route::post('admin/home',[IndexController::class,'login']);
 
 
 

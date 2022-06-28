@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
+use App\Http\Controllers\AdminController;
 
 class IndexController extends Controller
 {
@@ -31,23 +32,30 @@ class IndexController extends Controller
 
         if ($validator->fails()) {
             return redirect('/')
-              ->withErrors($validator)
-              ->withInput();
+                   ->withErrors($validator)
+                   ->withInput();
         };
 
         $user = DB::table('admin')->where([
             "email" => $request->input('email'),
-            "password" => $request->input('password')
-        ])->exists();
-
+        ])->first();
+        
         if(!$user){
             return redirect('/')
-              ->withErrors("用户不存在")
-              ->withInput();;
+                   ->withErrors("用户不存在")
+                   ->withInput();
+        }else if(
+            $user->email != $request->input('email') || $user->password != $request->input('password')
+        ){
+            return redirect('/')
+                   ->withErrors("账号或者密码不正确")
+                   ->withInput();
+        }else{
+            //存储session 通过全局 Session 助手函数 ...
+            session(['user_type' => 'admin']);
+            //重定向到后台首页
+            return view('admin/home',[ 'user' => $user ]);
         }
-        return view('admin/home');
-        // $user = DB::table('admin')->where('email','=',$message['email'])->get();
         
-        // return $request->ip();
     }
 }
