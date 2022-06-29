@@ -28,7 +28,7 @@
                         </span>
                         <div class="dropdown-menu p-0 m-0">
                             <form>
-                                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                                <input class="form-control" type="search" placeholder="@lang('lang.Search')" aria-label="Search">
                             </form>
                         </div>
                     </div>
@@ -51,45 +51,6 @@
                                     </div>
                                     <span class="notify-time">3:20 am</span>
                                 </li>
-                                {{--<li class="media dropdown-item">
-                                    <span class="primary">
-                                        <i class="ti-shopping-cart"></i>
-                                    </span>
-                                    <div class="media-body">
-                                        <a href="#">
-                                            <p><strong>Jennifer</strong> purchased Light Dashboard 2.0.</p>
-                                        </a>
-                                    </div>
-                                    <span class="notify-time">3:20 am</span>
-                                </li>
-                                <li class="media dropdown-item">
-                                    <span class="danger"><i class="ti-bookmark"></i></span>
-                                    <div class="media-body">
-                                        <a href="#">
-                                            <p><strong>Robin</strong> marked a <strong>ticket</strong> as unsolved.</p>
-                                        </a>
-                                    </div>
-                                    <span class="notify-time">3:20 am</span>
-                                </li>
-                                <li class="media dropdown-item">
-                                    <span class="primary"><i class="ti-heart"></i></span>
-                                    <div class="media-body">
-                                        <a href="#">
-                                            <p><strong>David</strong> purchased Light Dashboard 1.0.</p>
-                                        </a>
-                                    </div>
-                                    <span class="notify-time">3:20 am</span>
-                                </li>
-                                <li class="media dropdown-item">
-                                    <span class="success"><i class="ti-image"></i></span>
-                                    <div class="media-body">
-                                        <a href="#">
-                                            <p><strong> James.</strong> has added a<strong>customer</strong> Successfully
-                                            </p>
-                                        </a>
-                                    </div>
-                                    <span class="notify-time">3:20 am</span>
-                                </li>--}}
                             </ul>
                             <a class="all-notification" href="#">See all notifications <i class="ti-arrow-right"></i></a>
                         </div>
@@ -101,19 +62,24 @@
                         <div class="dropdown-menu dropdown-menu-right">
                             <a href="./app-profile.html" class="dropdown-item">
                                 <i class="icon-user"></i>
-                                <span class="ml-2">{{ __('zh.Profile') }} </span>
+                                <span class="ml-2">@lang('lang.Profile')</span>
                             </a>
-                            <a href="{{ URL('/changelang') }}" class="dropdown-item">
-                                <i class="iconfont icon-duoyuyan"></i>
-                                <span class="ml-2">{{ __('zh.chinese') }} </span>
-                            </a>
+                            @foreach (Config::get('app.locales') as $lang => $language)
+                                @if ($lang != App::getLocale())
+                                <a href="{{ App::getLocale() == 'en' ? URL('/Locale/zh') : URL('/Locale/en') }}" class="dropdown-item">
+                                    <i class="iconfont icon-duoyuyan"></i>
+                                    <span class="ml-2">{{ $language }}</span>
+                                </a>
+                                @endif
+                            @endforeach
+                            
                             <a href="./email-inbox.html" class="dropdown-item">
                                 <i class="icon-envelope-open"></i>
-                                <span class="ml-2">{{ __('zh.Inbox') }} </span>
+                                <span class="ml-2">@lang('lang.Inbox')</span>
                             </a>
-                            <a href="./page-login.html" class="dropdown-item">
+                            <a href="{{ url('/logout') }}" class="dropdown-item">
                                 <i class="icon-key"></i>
-                                <span class="ml-2">{{ __('zh.Logout') }} </span>
+                                <span class="ml-2">@lang('lang.Logout')</span>
                             </a>
                         </div>
                     </li>

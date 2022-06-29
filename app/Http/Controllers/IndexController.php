@@ -20,14 +20,16 @@ class IndexController extends Controller
     public function login(Request $request)
     {
         $validator = Validator::make($request->all(),[
-            'email' => 'required|max:30|email',
+            'email'    => 'required|max:30|email',
             'password' => 'required',
+            'captcha'  => 'required',
         ],
         [
             'email.required'    => '请输入您的电子邮箱!',
             'email.max'         => '邮箱长度最大为30个字符!',
             'email.email'       => '邮箱格式错误',
             'password.required' => '请输入您的密码!',
+            'captcha.required'  => '请输入验证码!',
         ]);
 
         if ($validator->fails()) {
@@ -50,11 +52,15 @@ class IndexController extends Controller
             return redirect('/')
                    ->withErrors("账号或者密码不正确")
                    ->withInput();
+        }elseif(session('captcha') != strtoupper($request->input('captcha'))){
+            return redirect('/')
+                    ->withErrors('验证码错误')
+                    ->withInput();
         }else{
             //存储session 通过全局 Session 助手函数 ...
             session(['user_type' => $user->email ]);
             //重定向到后台首页
-            return redirect()->route('admin.home',['user' => $user->first_name ]);
+            return redirect('/LoanApplication');
             // return $user->email;
         }
         

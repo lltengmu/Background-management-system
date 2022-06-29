@@ -24,6 +24,13 @@
                                             <label><strong>Password</strong></label>
                                             <input type="password" name="password" class="form-control" value="">
                                         </div>
+                                        <div class="form-group">
+                                            <label><strong>Captcha</strong></label>
+                                            <div style="display: flex;">
+                                                <input type="text" name="captcha" style="width:70%;height:68px;" class="form-control" value="" placeholder="请输入验证码">
+                                                <img src="{{ url('captcha') }}" alt="换一张" style="width: 30%;height:100%;" onclick="this.src='{{ url('captcha') }}?' + Math.random()">
+                                            </div>
+                                        </div>
                                         <div class="form-row d-flex justify-content-between mt-4 mb-2">
                                             <div class="form-group">
                                                 <div class="form-check ml-2">
@@ -60,6 +67,13 @@
             });
         </script>
         @endforeach
+    @elseif (session('logout'))
+        <script>
+            layui.use('layer', function(){
+                var layer = layui.layer;
+                layer.msg("{{ session('logout') }}");
+            });
+        </script>
     @endif
     
 @endsection

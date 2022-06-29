@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="{{ URL::asset('focus-premium/themes/focus-premium/focus/vendor/owl-carousel/css/owl.theme.default.min.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('focus-premium/themes/focus-premium/focus/vendor/jqvmap/css/jqvmap.min.css') }}">
     <link href="{{ URL::asset('focus-premium/themes/focus-premium/focus/css/style.css') }}" rel="stylesheet">
+    <!-- datatable.css -->
+    <link href="{{ URL::asset('focus-premium/themes/focus-premium/focus/vendor/datatables/css/jquery.dataTables.min.css') }}" rel="stylesheet">
     <!-- iconfont -->
     <link rel="stylesheet" href="{{ URL::asset('font_3488849_yfroy1i6sks/iconfont.css') }}">
     <style>
@@ -22,6 +24,15 @@
         }
         .content-body{
             min-height:100%;
+        }
+        table.dataTable thead th, table.dataTable thead td{
+            border-bottom: none;
+        }
+        table.dataTable tfoot th, table.dataTable tfoot td{
+            border-top: none;
+        }
+        table.dataTable.no-footer {
+            border-bottom: none;
         }
     </style>
 
@@ -84,6 +95,10 @@
 
 
     <script src="{{ URL::asset('focus-premium/themes/focus-premium/focus/js/dashboard/dashboard-1.js') }}"></script>
+
+    <!-- Datatable -->
+    <script src="{{ URL::asset('focus-premium/themes/focus-premium/focus/vendor/datatables/js/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ URL::asset('focus-premium/themes/focus-premium/focus/js/plugins-init/datatables.init.js') }}"></script>
 
 </body>
 

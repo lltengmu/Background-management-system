@@ -5,6 +5,7 @@ use App\Http\Controllers\CommentController;
 use App\Http\Controllers\DataController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\CaptchaController;
 use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\ChangeLang;
 use App\Http\Controllers\OneController;
@@ -26,8 +27,24 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',[IndexController::class,'index']);
 Route::get('/register',[IndexController::class,'register']);
 Route::post('/login',[IndexController::class,'login']);
-Route::get('admin/home/{user}',[AdminController::class,'index'])->name('admin.home');
-Route::get('/locale',[LanguageController::class,'index'])->name('lang.change');
+Route::get('captcha',[CaptchaController::class,'index']);
+Route::middleware(['setLocale','isLogin'])->group(function(){
+    Route::get('/LoanApplication',[AdminController::class,'index']);
+    Route::get('/Locale/{lang}',[LanguageController::class,'index']);
+    Route::get('/approval',[AdminController::class,'approval']);
+    Route::get('/dashboard',[AdminController::class,'dashboard']);
+    Route::get('/customer',[AdminController::class,'customer']);
+    Route::get('/loanTamplate',[AdminController::class,'loanTamplate']);
+    Route::get('/report',[AdminController::class,'report']);
+    Route::get('/sp',[AdminController::class,'sp']);
+    Route::get('/user',[AdminController::class,'user']);
+
+
+    //退出登录
+    Route::get('/logout',[AdminController::class,'logout']);
+});
+
+
 
 
 
