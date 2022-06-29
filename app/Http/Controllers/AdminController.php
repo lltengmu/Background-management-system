@@ -9,8 +9,8 @@ use Illuminate\Support\Facades\Validator;
 
 class AdminController extends Controller
 {
-    public function index()
+    public function index($user)
     {
-        return view('admin/home');
+        return view('admin/home',['user' => $user ]);
     }
 }

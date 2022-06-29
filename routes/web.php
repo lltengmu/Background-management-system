@@ -4,6 +4,7 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\DataController;
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\ChangeLang;
 use App\Http\Controllers\OneController;
@@ -24,8 +25,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/',[IndexController::class,'index']);
 Route::get('/register',[IndexController::class,'register']);
-Route::post('admin/home',[IndexController::class,'login']);
-Route::any('/locale/{locale}',[LanguageController::class,'index'])->name('lang.change');
+Route::post('/login',[IndexController::class,'login']);
+Route::get('admin/home/{user}',[AdminController::class,'index'])->name('admin.home');
+Route::get('/locale',[LanguageController::class,'index'])->name('lang.change');
 
 
 

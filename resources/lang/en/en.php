@@ -1,9 +1,9 @@
 <?php
 
 return [
-    "chinese"           => "中文",
-    "Inbox"             => "邮箱",
-    "Logout"            => "登出",
-    "Profile"           => "简介",
-    "Hi, welcome back!" => "欢迎回来！"
+    "chinese"           => "chinese",
+    "Inbox"             => "Inbox",
+    "Logout"            => "Logout",
+    "Profile"           => "Profile",
+    "Hi, welcome back!" => "Hi, welcome back!"
 ];

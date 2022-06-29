@@ -39,7 +39,7 @@ class IndexController extends Controller
         $user = DB::table('admin')->where([
             "email" => $request->input('email'),
         ])->first();
-        
+
         if(!$user){
             return redirect('/')
                    ->withErrors("用户不存在")
@@ -52,9 +52,10 @@ class IndexController extends Controller
                    ->withInput();
         }else{
             //存储session 通过全局 Session 助手函数 ...
-            session(['user_type' => 'admin']);
+            session(['user_type' => $user->email ]);
             //重定向到后台首页
-            return view('admin/home',[ 'user' => $user ]);
+            return redirect()->route('admin.home',['user' => $user->first_name ]);
+            // return $user->email;
         }
         
     }

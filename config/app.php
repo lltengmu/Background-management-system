@@ -83,7 +83,7 @@ return [
     'locale' => 'en',
     'locales'=>[
         'en' => "English",
-        'zh' => "chinese"
+        'zh' => "中文"
     ],
 
     /*

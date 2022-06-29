@@ -99,7 +99,6 @@
                             <i class="mdi mdi-account"></i>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
-                            @if(App::isLocale('zh'))
                             <a href="./app-profile.html" class="dropdown-item">
                                 <i class="icon-user"></i>
                                 <span class="ml-2">{{ __('zh.Profile') }} </span>
@@ -116,25 +115,6 @@
                                 <i class="icon-key"></i>
                                 <span class="ml-2">{{ __('zh.Logout') }} </span>
                             </a>
-                            @endif
-                            @if(App::isLocale('en'))
-                            <a href="./app-profile.html" class="dropdown-item">
-                                <i class="icon-user"></i>
-                                <span class="ml-2">{{ __('en.Profile') }} </span>
-                            </a>
-                            <a href="{{ URL('/changelang') }}" class="dropdown-item">
-                                <i class="iconfont icon-duoyuyan"></i>
-                                <span class="ml-2">{{ __('en.chinese') }} </span>
-                            </a>
-                            <a href="./email-inbox.html" class="dropdown-item">
-                                <i class="icon-envelope-open"></i>
-                                <span class="ml-2">{{ __('en.Inbox') }} </span>
-                            </a>
-                            <a href="./page-login.html" class="dropdown-item">
-                                <i class="icon-key"></i>
-                                <span class="ml-2">{{ __('en.Logout') }} </span>
-                            </a>
-                            @endif
                         </div>
                     </li>
                 </ul>
