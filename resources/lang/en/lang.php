@@ -26,5 +26,6 @@ return [
     "Repayment period"                       =>       "Repayment period",
     "Payment date"                           =>       "Payment date",
     "state"                                  =>       "state",
-    "operation"                              =>       "operation"
+    "operation"                              =>       "operation",
+    "company"                                =>       "company",
 ];

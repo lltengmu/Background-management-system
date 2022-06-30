@@ -18,6 +18,9 @@
     <link href="{{ URL::asset('focus-premium/themes/focus-premium/focus/vendor/datatables/css/jquery.dataTables.min.css') }}" rel="stylesheet">
     <!-- iconfont -->
     <link rel="stylesheet" href="{{ URL::asset('font_3488849_yfroy1i6sks/iconfont.css') }}">
+
+    <!-- jQuery -->
+    <script src="{{ URL::asset('js/jQuery.js') }}"></script>
     <style>
         .quixnav .metismenu .has-arrow:after {
             display:none;
@@ -98,7 +101,10 @@
 
     <!-- Datatable -->
     <script src="{{ URL::asset('focus-premium/themes/focus-premium/focus/vendor/datatables/js/jquery.dataTables.min.js') }}"></script>
-    <script src="{{ URL::asset('focus-premium/themes/focus-premium/focus/js/plugins-init/datatables.init.js') }}"></script>
+    {{--<script src="{{ URL::asset('focus-premium/themes/focus-premium/focus/js/plugins-init/datatables.init.js') }}"></script>--}}
+    
+
+    @yield("script")
 
 </body>
 
