@@ -8,7 +8,6 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>@yield('title')</title>
     <!-- Favicon icon -->
-    {{--<link rel="icon" type="image/png" sizes="16x16" href="./images/favicon.png">--}}
     <link rel="icon" type="image/png" sizes="16x16" href="{{ URL::asset('focus-premium/themes/focus-premium/focus/images/favicon.png') }}">
     <link rel="stylesheet" href="{{ URL::asset('focus-premium/themes/focus-premium/focus/vendor/owl-carousel/css/owl.carousel.min.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('focus-premium/themes/focus-premium/focus/vendor/owl-carousel/css/owl.theme.default.min.css') }}">
@@ -18,28 +17,17 @@
     <link href="{{ URL::asset('focus-premium/themes/focus-premium/focus/vendor/datatables/css/jquery.dataTables.min.css') }}" rel="stylesheet">
     <!-- iconfont -->
     <link rel="stylesheet" href="{{ URL::asset('font_3488849_yfroy1i6sks/iconfont.css') }}">
+    <!-- layui style -->
+    <link href="{{ URL::asset('layui/layui/css/layui.css') }}" rel="stylesheet">
 
     <!-- jQuery -->
     <script src="{{ URL::asset('js/jQuery.js') }}"></script>
     <style>
-        .quixnav .metismenu .has-arrow:after {
-            display:none;
-        }
         .content-body{
-            min-height:100%;
-        }
-        table.dataTable thead th, table.dataTable thead td{
-            border-bottom: none;
-        }
-        table.dataTable tfoot th, table.dataTable tfoot td{
-            border-top: none;
-        }
-        table.dataTable.no-footer {
-            border-bottom: none;
+            min-height:0px !important;
         }
     </style>
-
-
+    @yield('style')
 
 </head>
 

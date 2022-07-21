@@ -23,14 +23,9 @@
             <div class="collapse navbar-collapse justify-content-between">
                 <div class="header-left">
                     <div class="search_bar dropdown">
-                        <span class="search_icon p-3 c-pointer" data-toggle="dropdown">
-                            <i class="mdi mdi-magnify"></i>
+                        <span class="search_icon p-3 c-pointer" data-toggle="dropdown" style="display: flex;justify-content: center;align-items: center">
+                            <i class="layui-icon layui-icon-refresh" style="padding:10px 0 0 0;color:rgb(89,59,219);transform:scale(.8);" onclick="refresh()"></i>
                         </span>
-                        <div class="dropdown-menu p-0 m-0">
-                            <form>
-                                <input class="form-control" type="search" placeholder="@lang('lang.Search')" aria-label="Search">
-                            </form>
-                        </div>
                     </div>
                 </div>
 
@@ -62,24 +57,15 @@
                         <div class="dropdown-menu dropdown-menu-right">
                             <a href="./app-profile.html" class="dropdown-item">
                                 <i class="icon-user"></i>
-                                <span class="ml-2">@lang('lang.Profile')</span>
+                                <span class="ml-2">简介</span>
                             </a>
-                            @foreach (Config::get('app.locales') as $lang => $language)
-                                @if ($lang != App::getLocale())
-                                <a href="{{ App::getLocale() == 'en' ? URL('/Locale/zh') : URL('/Locale/en') }}" class="dropdown-item">
-                                    <i class="iconfont icon-duoyuyan"></i>
-                                    <span class="ml-2">{{ $language }}</span>
-                                </a>
-                                @endif
-                            @endforeach
-                            
                             <a href="./email-inbox.html" class="dropdown-item">
                                 <i class="icon-envelope-open"></i>
-                                <span class="ml-2">@lang('lang.Inbox')</span>
+                                <span class="ml-2">邮箱</span>
                             </a>
                             <a href="{{ url('/logout') }}" class="dropdown-item">
                                 <i class="icon-key"></i>
-                                <span class="ml-2">@lang('lang.Logout')</span>
+                                <span class="ml-2">退出</span>
                             </a>
                         </div>
                     </li>
@@ -88,4 +74,9 @@
         </nav>
     </div>
 </div>
+<script>
+    let refresh = () => {
+        location.reload();
+    };
+</script>
 <!--**********************************Header end ti-comment-alt***********************************-->

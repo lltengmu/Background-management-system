@@ -7,6 +7,7 @@ use App\Http\Controllers\IndexController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CaptchaController;
 use App\Http\Controllers\LanguageController;
+use App\Http\Controllers\ApprovalController;
 use App\Http\Controllers\ChangeLang;
 use App\Http\Controllers\OneController;
 use App\Http\Controllers\TaskController;
@@ -23,25 +24,31 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/',[IndexController::class,'index']);
-Route::get('/register',[IndexController::class,'register']);
-Route::post('/login',[IndexController::class,'login']);
+Route::get('/',function(){
+    return redirect('/admin/login');
+});
+/* 
+*管理员登录入口
+*get 请求login页面
+*post 实现登录
+*/
+Route::get('/admin/login',[IndexController::class,'index']);
+Route::post('/admin/loging',[IndexController::class,'index']);
+Route::get('/admin/register',[IndexController::class,'register']);
+/* 
+*验证码
+*/
 Route::get('captcha',[CaptchaController::class,'index']);
-Route::middleware(['setLocale','isLogin'])->group(function(){
-    Route::get('/LoanApplication',[AdminController::class,'index']);
-    Route::get('/Locale/{lang}',[LanguageController::class,'index']);
-    Route::get('/approval',[AdminController::class,'approval']);
-    Route::get('/dashboard',[AdminController::class,'dashboard']);
-    Route::get('/customer',[AdminController::class,'customer']);
-    Route::get('/loanTamplate',[AdminController::class,'loanTamplate']);
-    Route::get('/report',[AdminController::class,'report']);
-    Route::get('/sp',[AdminController::class,'sp']);
-    Route::get('/user',[AdminController::class,'user']);
 
+
+
+Route::middleware(['isLogin'])->group(function(){
 
     //退出登录
+    Route::get('/admin/index',[AdminController::class,'index']);
     Route::get('/logout',[AdminController::class,'logout']);
+
+    Route::get('/approval/table',[ApprovalController::class,'index']);
 });
 
 

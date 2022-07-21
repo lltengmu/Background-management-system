@@ -12,7 +12,7 @@
                         <div class="row no-gutters">
                             <div class="col-xl-12">
                                 <div class="auth-form">
-                                    <h4 class="text-center mb-4">Sign up your account</h4>
+                                    <h4 class="text-center mb-4" style="font-weight: bold">管理员注册</h4>
                                     <form action="index.html">
                                         <div class="form-group">
                                             <label><strong>Username</strong></label>
@@ -27,7 +27,7 @@
                                             <input type="password" class="form-control" value="Password">
                                         </div>
                                         <div class="text-center mt-4">
-                                            <button type="submit" class="btn btn-primary btn-block">Sign me up</button>
+                                            <button type="submit" class="btn btn-primary btn-block">确认注册</button>
                                         </div>
                                     </form>
                                     <div class="new-account mt-3">

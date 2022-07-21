@@ -1,59 +1,48 @@
 <!--**********************************Sidebar start***********************************-->
-        <div class="quixnav">
-            <div class="quixnav-scroll">
-                <ul class="metismenu" id="menu">
-                    <li>
-                        <a class="has-arrow" href="{{ url('/LoanApplication') }}" aria-expanded="false">
-                            <i class="icon icon-single-04"></i>
-                            <span class="nav-text">@lang('lang.Loan application')</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="has-arrow" href="{{ url('/approval') }}" aria-expanded="false">
-                            <i class="icon icon-single-04"></i>
-                            <span class="nav-text">@lang('lang.Approval management')</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="has-arrow" href="{{ url('/dashboard') }}" aria-expanded="false">
-                            <i class="icon icon-single-04"></i>
-                            <span class="nav-text">@lang('lang.Dashboard')</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="has-arrow" href="{{ url('/customer') }}" aria-expanded="false">
-                            <i class="icon icon-single-04"></i>
-                            <span class="nav-text">@lang('lang.Report')</span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a class="has-arrow" href="{{ url('/loanTamplate') }}" aria-expanded="false">
-                            <i class="icon icon-single-04"></i>
-                            <span class="nav-text">@lang('lang.Loan template management')</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ url('/report') }}" aria-expanded="false">
-                            <i class="icon icon-single-04"></i>
-                            <span class="nav-text">@lang('lang.Customer management')</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="has-arrow" href="{{ url('/sp') }}" aria-expanded="false">
-                            <i class="icon icon-single-04"></i>
-                            <span class="nav-text">@lang('lang.Service provider management')</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="has-arrow" href="{{ url('/user') }}" aria-expanded="false">
-                            <i class="icon icon-single-04"></i>
-                            <span class="nav-text">@lang('lang.User management')</span>
-                        </a>
-                    </li>
+<div class="quixnav">
+    <div class="quixnav-scroll">
+        <ul class="metismenu" id="menu">
+            <li>
+                <a href="javascript:void()" aria-expanded="false">
+                    <i class="layui-icon layui-icon-home"></i>
+                    <span class="nav-text">系统首页</span>
+                </a>
+            </li>
+            <li>
+                <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                    <i class="layui-icon layui-icon-set"></i>
+                    <span class="nav-text">系统配置</span>
+                </a>
+                <ul aria-expanded="false">
+                    <li><a href="javascript:void()">参数配置</a></li>
+                    <li><a href="javascript:void()">日志管理</a></li>
+                    <li><a href="javascript:void()">字典管理</a></li>
+                    <li><a href="javascript:void()">附件管理</a></li>
                 </ul>
-            </div>
-
-
-        </div>
+            </li>
+            <li>
+                <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                    <i class="layui-icon layui-icon-user"></i>
+                    <span class="nav-text">权限管理</span>
+                </a>
+                <ul aria-expanded="false">
+                    <li><a href="javascript:void()">用户管理</a></li>
+                    <li><a href="javascript:void()">角色管理</a></li>
+                    <li><a href="javascript:void()">规则管理</a></li>
+                </ul>
+            </li>
+            <li>
+                <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                    <i class="layui-icon layui-icon-read"></i>
+                    <span class="nav-text">内容管理</span>
+                </a>
+                <ul aria-expanded="false">
+                    <li><a href="javascript:void()">栏目管理</a></li>
+                    <li><a href="javascript:void()">文章管理</a></li>
+                    <li><a href="javascript:void()">广告管理</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
 <!--**********************************Sidebar end***********************************-->

@@ -10,6 +10,8 @@
     <!-- Favicon icon -->
     {{--<link rel="icon" type="image/png" sizes="16x16" href="./images/favicon.png">--}}
     <link href="{{ URL::asset('focus-premium/themes/focus-premium/focus/css/style.css') }}" rel="stylesheet">
+    <!-- layui style-->
+    <link href="{{ URL::asset('layui/layui/css/style.css') }}" rel="stylesheet">
     <!-- Required validate -->
     <script src="{{ URL::asset('js/common/validate.js') }}"></script>
     <script src="{{ URL::asset('layui/layui/layui.js') }}"></script>
