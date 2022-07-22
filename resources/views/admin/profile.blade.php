@@ -2,9 +2,6 @@
 
 @section('style')
 <style>
-    .card{
-        margin-bottom:0px;
-    }
     .detail{
         width:30%;
         height:110px;
@@ -44,7 +41,6 @@
         
     }
     .top{
-        margin-top:10px;
         transition:.5s ease;
     }
     .top:hover{
