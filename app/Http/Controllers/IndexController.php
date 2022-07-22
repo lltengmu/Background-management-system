@@ -17,6 +17,7 @@ class IndexController extends Controller
     public function index(Request $request)
     {
         if($request->isMethod('post')){
+            //return sha1($request->input('passsword'));
             $validator = Validator::make($request->all(),[
                 'username'    => 'required|max:30',
                 'password' => 'required',
@@ -44,7 +45,7 @@ class IndexController extends Controller
                        ->withErrors("用户不存在")
                        ->withInput();
             }else if(
-                $user->username != $request->input('username') || $user->password != sha1($request->input('password'))
+                $user->username != $request->input('username') || $user->password != $request->input('password')
             ){
                 return redirect('/admin/login')
                        ->withErrors("账号或者密码不正确")
