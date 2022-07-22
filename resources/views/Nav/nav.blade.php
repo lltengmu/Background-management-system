@@ -3,7 +3,7 @@
     <div class="quixnav-scroll">
         <ul class="metismenu" id="menu">
             <li>
-                <a href="javascript:void()" aria-expanded="false">
+                <a href="{{ url('/admin/index') }}" aria-expanded="false">
                     <i class="layui-icon layui-icon-home"></i>
                     <span class="nav-text">系统首页</span>
                 </a>

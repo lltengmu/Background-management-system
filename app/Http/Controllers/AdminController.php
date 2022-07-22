@@ -20,4 +20,8 @@ class AdminController extends Controller
         Session::flash('logout','退出成功');
         return redirect('/admin/login');
     }
+    public function profile()
+    {
+        return view('/admin/profile');
+    }
 }

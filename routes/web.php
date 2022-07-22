@@ -42,13 +42,18 @@ Route::get('captcha',[CaptchaController::class,'index']);
 
 
 
-Route::middleware(['isLogin'])->group(function(){
+Route::group([ 'middleware'=>'isLogin'],function(){
 
+    Route::group(['prefix' =>'/admin'],function(){
+        Route::get('/index',[AdminController::class,'index']);
+        Route::get('/profile',[AdminController::class,'profile']);
+    });
+
+    /* 
+    *公共路由部分
+    */
     //退出登录
-    Route::get('/admin/index',[AdminController::class,'index']);
     Route::get('/logout',[AdminController::class,'logout']);
-
-    Route::get('/approval/table',[ApprovalController::class,'index']);
 });
 
 

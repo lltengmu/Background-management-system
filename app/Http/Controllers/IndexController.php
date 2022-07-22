@@ -55,7 +55,8 @@ class IndexController extends Controller
                         ->withInput();
             }else{
                 //存储session 通过全局 Session 助手函数 ...
-                session(['user_type' => $user->username ]);
+                session(['user_info' => $user->username ]);
+                session(['user_type' => "admin" ]);
                 //update log 此次登录的设备ip和数据里存储的ip不一样时，更新字段last_login_ip
                 if($request->ip() != $user->login_ip){
                     DB::table('admin')->where(["username" => $request->input('username')])->update([
