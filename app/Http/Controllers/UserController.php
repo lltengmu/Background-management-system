@@ -25,4 +25,12 @@ class UserController extends Controller
     {
         return view('/user/profile');
     }
+    public function orderEntry(Request $request)
+    {
+        if($request->isMethod('post')){
+            $user = DB::table('orderentry')->where('deal_address',$request->input('deal-address'))->first();
+            return $user;
+        }
+        return view('/user/orderEntry');
+    }
 }

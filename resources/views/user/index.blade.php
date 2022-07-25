@@ -111,7 +111,9 @@
                         display:flex;
                         justify-content:space-between;
                         align-items:center;">
-                        <div class="circle"></div>
+                        <div class="circle" style="overflow:hidden;">
+                            <img src="{{ URL::asset('images/pic.jpg') }}" alt="" style="width:100%;height:100%;">
+                        </div>
                         <div class="text" style="
                             width:60%; 
                             height:110px;

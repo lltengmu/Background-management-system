@@ -69,6 +69,7 @@ Route::group([ 'middleware'=>'isLogin'],function(){
     Route::group(['prefix' =>'/user'],function(){
         Route::get('/index',[UserController::class,'index']);
         Route::get('/profile',[UserController::class,'profile']);
+        Route::match(['post','get'],'/orderEntry',[UserController::class,'orderEntry']);
         Route::get('/logout',[UserController::class,'logout']);//退出登录
     });
     
