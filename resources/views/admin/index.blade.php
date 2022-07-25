@@ -6,11 +6,6 @@
 
 @section('style')
 <style>
-<<<<<<< HEAD
-.comment{
-    margin-right:25px;
-}
-=======
     .circle{
         position: relative;
         width:100px;
@@ -91,7 +86,6 @@
         color: #fff;
         background-color: rgba(89,59,219,1);
     }
->>>>>>> a1be428 (update 07/24)
 </style>
 
 @endsection
@@ -101,9 +95,6 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12 mb-4">
-<<<<<<< HEAD
-                系统信息
-=======
                 <div class="card" style="
                         display:flex;
                         justify-content:center;
@@ -139,32 +130,8 @@
                         </div>
                     </div>
                 </div>
->>>>>>> a1be428 (update 07/24)
             </div>
         </div>
-        <div class="row grid">
-            <div class="col-lg-12">
-                <div class="grid-col">
-                    <span class="comment">系统版本</span>
-                    <span>v1.0</span>
-                </div>
-            </div>
-<<<<<<< HEAD
-        </div>
-        <div class="row grid">
-            <div class="col-lg-12">
-                <div class="grid-col">
-                    <span class="comment">后端框架</span>
-                    <a href="https://learnku.com/docs/laravel/8.5/helpers/10389" style="text-decoration: underline;">laravel 8.83.16</a>
-                </div>
-            </div>
-        </div>
-        <div class="row grid">
-            <div class="col-lg-12">
-                <div class="grid-col">
-                    <span class="comment">主要特色</span>
-                    <span>响应式布局/简约/易上手/完善的多角色权限管理</span>
-=======
             <div class="col-xl-3 right-card">
                 <div class="row">
                     <div class="card col-lg-12">
@@ -192,7 +159,6 @@
                             </div>
                         </div>
                     </div>
->>>>>>> a1be428 (update 07/24)
                 </div>
             </div>
         </div>
@@ -252,8 +218,7 @@
     @endforeach
 
 </div>
-<<<<<<< HEAD
-=======
+
 @endsection
 
 @section('script')
@@ -267,5 +232,4 @@
 <script>
     
 </script>
->>>>>>> a1be428 (update 07/24)
 @endsection
