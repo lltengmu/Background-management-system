@@ -56,15 +56,15 @@
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
                             <a href="{{ url('/') }}/{{ session('user_type') }}/profile" class="dropdown-item">
-                                <i class="icon-user"></i>
+                                <i class="layui-icon layui-icon-username"></i>
                                 <span class="ml-2">简介</span>
                             </a>
                             <a href="./email-inbox.html" class="dropdown-item">
-                                <i class="icon-envelope-open"></i>
+                                <i class="layui-icon layui-icon-email"></i>
                                 <span class="ml-2">邮箱</span>
                             </a>
-                            <a href="{{ url('/logout') }}" class="dropdown-item">
-                                <i class="icon-key"></i>
+                            <a href="{{ url('/') }}/{{ session('user_type') }}/logout" class="dropdown-item">
+                                <i class="layui-icon layui-icon-logout"></i>
                                 <span class="ml-2">退出</span>
                             </a>
                         </div>

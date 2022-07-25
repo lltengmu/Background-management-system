@@ -14,8 +14,8 @@
                             <div class="col-xl-12">
                                 <div class="auth-form">
                                     <h4 class="text-center mb-4" style="font-weight: bold;">后台管理系统</h4>
-                                    <h4 class="text-center mb-" style="font-size: 14px;"><span class="bg-primary text-white" style="padding:5px;font-weight: bold;border-radius:5px;">管理员</span></h4>
-                                    <form action="{{ url('/admin/loging') }}" method="POST">
+                                    <h4 class="text-center mb-" style="font-size: 14px;"><span class="bg-primary text-white" style="padding:5px;font-weight: bold;border-radius:5px;">用户</span></h4>
+                                    <form action="{{ url('/user/loging') }}" method="POST">
                                         @csrf
                                         <div class="form-group">
                                             <label><strong>用户名</strong></label>
@@ -48,7 +48,7 @@
                                         </div>
                                     </form>
                                     <div class="new-account mt-3">
-                                        <p>Don't have an account? <a class="text-primary" href="{{ url('/admin/register') }}">Sign up</a></p>
+                                        <p>Don't have an account? <a class="text-primary" href="{{ url('/user/register') }}">Sign up</a></p>
                                     </div>
                                 </div>
                             </div>

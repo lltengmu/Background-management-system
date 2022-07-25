@@ -8,25 +8,21 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
 
-class AdminController extends Controller
+class UserController extends Controller
 {
     public function index()
     {
-        return view('admin/index');
+        $staffs = DB::table('team')->get();
+        return view('/user/index',['staffs'=>$staffs]);
     }
     public function logout()
     {
         session()->flush();
         Session::flash('logout','退出成功');
-        return redirect('/admin/login');
+        return redirect('/user/login');
     }
     public function profile()
     {
-        return view('/admin/profile');
-    }
-    public function userManagement()
-    {
-        $users = DB::table('users')->get();
-        return view('/admin/userManagement',['users' => $users]);
+        return view('/user/profile');
     }
 }

@@ -1,16 +1,18 @@
-@extends('layouts.layout')
+@extends('layouts.layout-user')
 
 @section('title')
     系统首页
 @endsection
 
+@section('link')
+<link href="{{ URL::asset('focus-premium/themes/focus-premium/focus/vendor/pg-calendar/css/pignose.calendar.min.css') }}" rel="stylesheet">
+<link href="{{ URL::asset('focus-premium/themes/focus-premium/focus/vendor/chartist/css/chartist.min.css') }}" rel="stylesheet">
+@endsection
+
+
 @section('style')
+
 <style>
-<<<<<<< HEAD
-.comment{
-    margin-right:25px;
-}
-=======
     .circle{
         position: relative;
         width:100px;
@@ -60,7 +62,7 @@
         transition:.5s ease;
     }
     .top:hover{
-        transform:scale(1.1);
+        transform:scale(1.02);
     }
     .right-card .card{
         margin-bottom: 20px;
@@ -91,19 +93,15 @@
         color: #fff;
         background-color: rgba(89,59,219,1);
     }
->>>>>>> a1be428 (update 07/24)
 </style>
-
 @endsection
+
 
 @section('content')
 <div class="content-body">
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12 mb-4">
-<<<<<<< HEAD
-                系统信息
-=======
                 <div class="card" style="
                         display:flex;
                         justify-content:center;
@@ -126,7 +124,7 @@
                         <div class="detail">
                             <div class="item">
                                 <div class="item-title">项目数</div>
-                                <div class="item-count">6</div>
+                                <div class="item-count">2</div>
                             </div>
                             <div class="item">
                                 <div class="item-title">团队内排名</div>
@@ -139,32 +137,99 @@
                         </div>
                     </div>
                 </div>
->>>>>>> a1be428 (update 07/24)
             </div>
-        </div>
+        </div>  
         <div class="row grid">
-            <div class="col-lg-12">
-                <div class="grid-col">
-                    <span class="comment">系统版本</span>
-                    <span>v1.0</span>
+            <div class="col-xl-9">
+                <div class="row grid">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title" style="font-weight:bold;">我的项目</h4>
+                                <a href="javascript:void(0)" onclick="class="mb-0 subtitle" style="color:rgba(0,84,253,1); font-weight:normal;">查看更多</a>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-xl-12 col-xxl-12 col-lg-12 col-sm-12 top">
+                                        <div class="card text-white bg-primary col-lg-12">
+                                            <div class="card-header">
+                                                <h5 class="card-title text-white">Light card title</h5>
+                                            </div>
+                                            <div class="card-body mb-0">
+                                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                            </div>
+                                            <div class="card-footer bg-transparent border-0" style="display: flex;justify-content:space-between;">
+                                                <div>xxx项目组</div>
+                                                <div>Last updateed 3 min ago</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-12 col-xxl-12 col-lg-12 col-sm-12 top">
+                                        <div class="card text-white bg-primary col-lg-12">
+                                            <div class="card-header">
+                                                <h5 class="card-title text-white">Light card title</h5>
+                                            </div>
+                                            <div class="card-body mb-0">
+                                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                            </div>
+                                            <div class="card-footer bg-transparent border-0" style="display: flex;justify-content:space-between;">
+                                                <div>xxx项目组</div>
+                                                <div>Last updateed 3 min ago</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title text-left" style="font-weight:bold;">项目动态</h4>
+                                <a href="javascript:void(0)" class="mb-0 subtitle" style="color:rgba(0,84,253,1);font-weight:normal;">查看更多</a>
+                            </div>
+                            <div class="card-body">
+                                <div class="row grid">
+                                    <div class="col-lg-12">
+                                        <div class="grid-col" style="background-color:rgba(248,249,251,1);margin-bottom:10px;">
+                                            <div class="row">
+                                                <div class="col-lg-1">
+                                                    <div class="img" style="background-color:rgba(124,125,153,1);width:40px;height:40px;border-radius:50%;"></div>
+                                                </div>
+                                                <div class="col-lg-1" style="font-size:20px;padding:5px 0px;">王小祥</div>
+                                                <div class="col-lg-5" style="font-size:20px;padding:5px 0px;">在<span style="padding:0 10px;color:rgba(0,84,253,1);">蜂鸟小分队</span>新建项目<span style="padding:0 10px;color:rgba(0,84,253,1);">6月迭代</span></div>
+                                                <div class="col-lg-5 text-right" style="padding:10px 20px;">5小时前</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="grid-col" style="background-color:rgba(248,249,251,1);margin-bottom:10px;">
+                                            <div class="row">
+                                                <div class="col-lg-1">
+                                                    <div class="img" style="background-color:rgba(124,125,153,1);width:40px;height:40px;border-radius:50%;"></div>
+                                                </div>
+                                                <div class="col-lg-1" style="font-size:20px;padding:5px 0px;">王小祥</div>
+                                                <div class="col-lg-5" style="font-size:20px;padding:5px 0px;">在<span style="padding:0 10px;color:rgba(0,84,253,1);">蜂鸟小分队</span>新建项目<span style="padding:0 10px;color:rgba(0,84,253,1);">6月迭代</span></div>
+                                                <div class="col-lg-5 text-right" style="padding:10px 20px;">5小时前</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="grid-col" style="background-color:rgba(248,249,251,1);margin-bottom:10px;">
+                                            <div class="row">
+                                                <div class="col-lg-1">
+                                                    <div class="img" style="background-color:rgba(124,125,153,1);width:40px;height:40px;border-radius:50%;"></div>
+                                                </div>
+                                                <div class="col-lg-1" style="font-size:20px;padding:5px 0px;">王小祥</div>
+                                                <div class="col-lg-5" style="font-size:20px;padding:5px 0px;">在<span style="padding:0 10px;color:rgba(0,84,253,1);">蜂鸟小分队</span>新建项目<span style="padding:0 10px;color:rgba(0,84,253,1);">6月迭代</span></div>
+                                                <div class="col-lg-5 text-right" style="padding:10px 20px;">5小时前</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-<<<<<<< HEAD
-        </div>
-        <div class="row grid">
-            <div class="col-lg-12">
-                <div class="grid-col">
-                    <span class="comment">后端框架</span>
-                    <a href="https://learnku.com/docs/laravel/8.5/helpers/10389" style="text-decoration: underline;">laravel 8.83.16</a>
-                </div>
-            </div>
-        </div>
-        <div class="row grid">
-            <div class="col-lg-12">
-                <div class="grid-col">
-                    <span class="comment">主要特色</span>
-                    <span>响应式布局/简约/易上手/完善的多角色权限管理</span>
-=======
             <div class="col-xl-3 right-card">
                 <div class="row">
                     <div class="card col-lg-12">
@@ -176,7 +241,7 @@
                         </div>
                     </div>
                     <div class="card col-lg-12">
-                        <div class="card-header">团队</div>
+                        <div class="card-header">项目成员</div>
                         <div class="card-body">
                             <div class="row grid">
                                 @foreach ($staffs as $s)
@@ -192,7 +257,6 @@
                             </div>
                         </div>
                     </div>
->>>>>>> a1be428 (update 07/24)
                 </div>
             </div>
         </div>
@@ -252,8 +316,6 @@
     @endforeach
 
 </div>
-<<<<<<< HEAD
-=======
 @endsection
 
 @section('script')
@@ -267,5 +329,4 @@
 <script>
     
 </script>
->>>>>>> a1be428 (update 07/24)
 @endsection

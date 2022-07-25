@@ -19,6 +19,7 @@
     {{--<link rel="stylesheet" href="{{ URL::asset('font_3488849_yfroy1i6sks/iconfont.css') }}">--}}
     <!-- layui style -->
     <link href="{{ URL::asset('layui/layui/css/layui.css') }}" rel="stylesheet">
+    @yield('link')
 
     <!-- jQuery -->
     <script src="{{ URL::asset('js/jQuery.js') }}"></script>
@@ -51,7 +52,7 @@
 
         @include('Header.header')
 
-        @include('Nav.nav')
+        @include('Nav.nav-user')
 
         @yield('content')
 
@@ -90,6 +91,9 @@
     <!-- Datatable -->
     <script src="{{ URL::asset('focus-premium/themes/focus-premium/focus/vendor/datatables/js/jquery.dataTables.min.js') }}"></script>
     {{--<script src="{{ URL::asset('focus-premium/themes/focus-premium/focus/js/plugins-init/datatables.init.js') }}"></script>--}}
+
+    <!-- layui JS -->
+    {{--<script src="{{ URL::asset('layui/layui/layui.js') }}"></script>--}}
     
 
     @yield("script")
