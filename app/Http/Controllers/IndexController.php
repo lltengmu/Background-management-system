@@ -45,7 +45,7 @@ class IndexController extends Controller
                        ->withErrors("用户不存在")
                        ->withInput();
             }else if(
-                $user->username != $request->input('username') || $user->password != sha1($request->input('password'))
+                $user->username != $request->input('username') || $user->password != $request->input('password')
             ){
                 return redirect('/admin/login')
                        ->withErrors("账号或者密码不正确")

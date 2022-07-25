@@ -71,7 +71,9 @@
                     <div class="col-lg-12">
                         <div class="row">
                             <div class="user-info-desc col-lg-1">
-                                <div class="user-info-pic" style="width:70px;height:70px;border-radius:50%;background-color:rgba(124,125,153,1);"></div>
+                                <div class="user-info-pic" style="width:70px;height:70px;border-radius:50%;background-color:rgba(124,125,153,1);overflow:hidden;">
+                                    <img src="{{ URL::asset('images/pic.jpg')}}" alt="" style="width:100%;height:100%;">
+                                </div>
                             </div>
                             <div class="user-info-desc col-lg-2" style="display:flex;flex-direction:column;justify-content:space-around;">
                                 <div class="user-info-desc-title">所在项目/部门</div>
@@ -94,16 +96,16 @@
                                 </div>
                             </div>
                             <div class="user-info-more col-lg-1 text-right" style="display:flex;justify-content:flex-end;align-items:center;">
-                                <div class="user-info-more" data-toggle="dropdown" style="width:30px;height:30px;display:flex;justify-content:center;align-items:center;border-radius:50%;background-color:rgba(124,125,153,.1);cursor:pointer;">
+                                <div class="user-info-more" data-toggle="dropdown" style="width:30px;height:30px;display:flex;justify-content:center;align-items:center;border-radius:50%;background-color:#ddd;cursor:pointer;">
                                     <i class="layui-icon layui-icon-more-vertical"></i>
-                                    <div class="dropdown-menu">
-                                        <h5 class="dropdown-header">Dropdown header</h5>
-                                        <a class="dropdown-item" href="#">Link 1</a>
-                                        <a class="dropdown-item" href="#">Link 2</a>
-                                        <a class="dropdown-item" href="#">Link 3</a>
-                                        <h5 class="dropdown-header">Dropdown header</h5>
-                                        <a class="dropdown-item" href="#">Another link</a>
-                                    </div>
+                                </div>
+                                <div class="dropdown-menu">
+                                    <h5 class="dropdown-header">Dropdown header</h5>
+                                    <a class="dropdown-item" href="#">Link 1</a>
+                                    <a class="dropdown-item" href="#">Link 2</a>
+                                    <a class="dropdown-item" href="#">Link 3</a>
+                                    <h5 class="dropdown-header">Dropdown header</h5>
+                                    <a class="dropdown-item" href="#">Another link</a>
                                 </div>
                             </div>
                         </div>

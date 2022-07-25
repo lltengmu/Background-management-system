@@ -19,7 +19,7 @@
     {{--<link rel="stylesheet" href="{{ URL::asset('font_3488849_yfroy1i6sks/iconfont.css') }}">--}}
     <!-- layui style -->
     <link href="{{ URL::asset('layui/layui/css/layui.css') }}" rel="stylesheet">
-
+    @yield('link')
     <!-- jQuery -->
     <script src="{{ URL::asset('js/jQuery.js') }}"></script>
     <style>

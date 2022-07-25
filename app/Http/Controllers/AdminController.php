@@ -12,7 +12,8 @@ class AdminController extends Controller
 {
     public function index()
     {
-        return view('admin/index');
+        $staffs = DB::table('team')->get();
+        return view('admin/index',['staffs' => $staffs]);
     }
     public function logout()
     {

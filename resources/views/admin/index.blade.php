@@ -4,7 +4,14 @@
     系统首页
 @endsection
 
+@section('link')
+<link href="{{ URL::asset('focus-premium/themes/focus-premium/focus/vendor/pg-calendar/css/pignose.calendar.min.css') }}" rel="stylesheet">
+<link href="{{ URL::asset('focus-premium/themes/focus-premium/focus/vendor/chartist/css/chartist.min.css') }}" rel="stylesheet">
+@endsection
+
+
 @section('style')
+
 <style>
     .circle{
         position: relative;
@@ -87,8 +94,8 @@
         background-color: rgba(89,59,219,1);
     }
 </style>
-
 @endsection
+
 
 @section('content')
 <div class="content-body">
@@ -104,7 +111,9 @@
                         display:flex;
                         justify-content:space-between;
                         align-items:center;">
-                        <div class="circle"></div>
+                        <div class="circle" style="overflow: hidden;">
+                            <img src="{{ URL::asset('images/pic.jpg') }}" alt="" style="width:100%;height:100%;">
+                        </div>
                         <div class="text" style="
                             width:60%; 
                             height:110px;
@@ -131,7 +140,154 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>  
+        <div class="row grid">
+            <div class="col-xl-9">
+                <div class="row grid">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title" style="font-weight:bold;">我的项目</h4>
+                                <a href="javascript:void(0)" class="mb-0 subtitle" style="color:rgba(0,84,253,1); font-weight:normal;">查看更多</a>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-xl-4 col-xxl-6 col-lg-6 col-sm-6 top">
+                                        <div class="card text-white bg-primary">
+                                            <div class="card-header">
+                                                <h5 class="card-title text-white">Light card title</h5>
+                                            </div>
+                                            <div class="card-body mb-0">
+                                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                            </div>
+                                            <div class="card-footer bg-transparent border-0" style="display: flex;justify-content:space-between;">
+                                                <div>xxx项目组</div>
+                                                <div>Last updateed 3 min ago</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-xxl-6 col-lg-6 col-sm-6 top">
+                                        <div class="card text-white bg-primary">
+                                            <div class="card-header">
+                                                <h5 class="card-title text-white">Light card title</h5>
+                                            </div>
+                                            <div class="card-body mb-0">
+                                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                            </div>
+                                            <div class="card-footer bg-transparent border-0" style="display: flex;justify-content:space-between;">
+                                                <div>xxx项目组</div>
+                                                <div>Last updateed 3 min ago</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-xxl-6 col-lg-6 col-sm-6 top">
+                                        <div class="card text-white bg-primary">
+                                            <div class="card-header">
+                                                <h5 class="card-title text-white">Light card title</h5>
+                                            </div>
+                                            <div class="card-body mb-0">
+                                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                            </div>
+                                            <div class="card-footer bg-transparent border-0" style="display: flex;justify-content:space-between;">
+                                                <div>xxx项目组</div>
+                                                <div>Last updateed 3 min ago</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-xxl-6 col-lg-6 col-sm-6 top">
+                                        <div class="card text-white bg-primary">
+                                            <div class="card-header">
+                                                <h5 class="card-title text-white">Light card title</h5>
+                                            </div>
+                                            <div class="card-body mb-0">
+                                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                            </div>
+                                            <div class="card-footer bg-transparent border-0" style="display: flex;justify-content:space-between;">
+                                                <div>xxx项目组</div>
+                                                <div>Last updateed 3 min ago</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-xxl-6 col-lg-6 col-sm-6 top">
+                                        <div class="card text-white bg-primary">
+                                            <div class="card-header">
+                                                <h5 class="card-title text-white">Light card title</h5>
+                                            </div>
+                                            <div class="card-body mb-0">
+                                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                            </div>
+                                            <div class="card-footer bg-transparent border-0" style="display: flex;justify-content:space-between;">
+                                                <div>xxx项目组</div>
+                                                <div>Last updateed 3 min ago</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-xxl-6 col-lg-6 col-sm-6 top">
+                                        <div class="card text-white bg-primary">
+                                            <div class="card-header">
+                                                <h5 class="card-title text-white">Light card title</h5>
+                                            </div>
+                                            <div class="card-body mb-0">
+                                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                            </div>
+                                            <div class="card-footer bg-transparent border-0" style="display: flex;justify-content:space-between;">
+                                                <div>xxx项目组</div>
+                                                <div>Last updateed 3 min ago</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title text-left" style="font-weight:bold;">项目动态</h4>
+                                <a href="javascript:void(0)" class="mb-0 subtitle" style="color:rgba(0,84,253,1);font-weight:normal;">查看更多</a>
+                            </div>
+                            <div class="card-body">
+                                <div class="row grid">
+                                    <div class="col-lg-12">
+                                        <div class="grid-col" style="background-color:rgba(248,249,251,1);margin-bottom:10px;">
+                                            <div class="row">
+                                                <div class="col-lg-1">
+                                                    <div class="img" style="background-color:rgba(124,125,153,1);width:40px;height:40px;border-radius:50%;"></div>
+                                                </div>
+                                                <div class="col-lg-1" style="font-size:20px;padding:5px 0px;">王小祥</div>
+                                                <div class="col-lg-5" style="font-size:20px;padding:5px 0px;">在<span style="padding:0 10px;color:rgba(0,84,253,1);">蜂鸟小分队</span>新建项目<span style="padding:0 10px;color:rgba(0,84,253,1);">6月迭代</span></div>
+                                                <div class="col-lg-5 text-right" style="padding:10px 20px;">5小时前</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="grid-col" style="background-color:rgba(248,249,251,1);margin-bottom:10px;">
+                                            <div class="row">
+                                                <div class="col-lg-1">
+                                                    <div class="img" style="background-color:rgba(124,125,153,1);width:40px;height:40px;border-radius:50%;"></div>
+                                                </div>
+                                                <div class="col-lg-1" style="font-size:20px;padding:5px 0px;">王小祥</div>
+                                                <div class="col-lg-5" style="font-size:20px;padding:5px 0px;">在<span style="padding:0 10px;color:rgba(0,84,253,1);">蜂鸟小分队</span>新建项目<span style="padding:0 10px;color:rgba(0,84,253,1);">6月迭代</span></div>
+                                                <div class="col-lg-5 text-right" style="padding:10px 20px;">5小时前</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="grid-col" style="background-color:rgba(248,249,251,1);margin-bottom:10px;">
+                                            <div class="row">
+                                                <div class="col-lg-1">
+                                                    <div class="img" style="background-color:rgba(124,125,153,1);width:40px;height:40px;border-radius:50%;"></div>
+                                                </div>
+                                                <div class="col-lg-1" style="font-size:20px;padding:5px 0px;">王小祥</div>
+                                                <div class="col-lg-5" style="font-size:20px;padding:5px 0px;">在<span style="padding:0 10px;color:rgba(0,84,253,1);">蜂鸟小分队</span>新建项目<span style="padding:0 10px;color:rgba(0,84,253,1);">6月迭代</span></div>
+                                                <div class="col-lg-5 text-right" style="padding:10px 20px;">5小时前</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="col-xl-3 right-card">
                 <div class="row">
                     <div class="card col-lg-12">
@@ -143,14 +299,16 @@
                         </div>
                     </div>
                     <div class="card col-lg-12">
-                        <div class="card-header">团队</div>
+                        <div class="card-header">项目成员</div>
                         <div class="card-body">
                             <div class="row grid">
                                 @foreach ($staffs as $s)
                                     <div class="col-xl-6 team">
                                         <div class="grid-col" data-toggle="modal" data-target="#exampleModalCenter{{ $s->id }}">
                                             <div class="row">
-                                                <div class="team-user-info"></div> 
+                                                <div class="team-user-info" style="overflow: hidden;">
+                                                    <img src="{{ URL::asset('images/pic3.jpg') }}" alt="" style="width:100%; height:100%;">
+                                                </div> 
                                                 <div class="col-lg-8 text-left" style="padding:10px 10px;">{{$s->name}}</div>
                                             </div>
                                         </div>
@@ -218,7 +376,6 @@
     @endforeach
 
 </div>
-
 @endsection
 
 @section('script')
