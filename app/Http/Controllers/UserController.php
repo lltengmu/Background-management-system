@@ -28,7 +28,7 @@ class UserController extends Controller
     public function orderEntry(Request $request)
     {
         if($request->isMethod('post')){
-            $user = DB::table('orderentry')->where('deal_address',$request->input('deal-address'))->first();
+            $user = DB::table('orderentry')->get();
             return $user;
         }
         return view('/user/orderEntry');

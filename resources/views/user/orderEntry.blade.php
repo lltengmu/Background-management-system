@@ -144,7 +144,7 @@
                     </div>
                     <div class="row grid">
                         <label for="old-transportation-nmber" class="col-lg-1" style="display: flex;justify-content:flex-end;align-items:center;">原运输单号:</label>
-                        <input type="text" id="old-transportation-nmber" class="form-control col-lg-4" placeholder="" name="old-transportation-nmber">
+                        <input type="text" id="old-transportation-nmber" class="form-control col-lg-4" placeholder="" name="old-transportation-number">
                         <label for="P/O" class="col-lg-1" style="display: flex;justify-content:flex-end;align-items:center;">P/O:</label>
                         <input type="text" id="P/O" class="form-control col-lg-4" placeholder="" name="P/O">
                     </div>
@@ -214,27 +214,37 @@
 
 @section('script')
     <script>
-        document.querySelector('#submit').addEventListener('click', function(e){
+        
+    document.querySelector('#submit').addEventListener('click', function(e){
         e.preventDefault();
         let data = {};
         let inputs = document.querySelectorAll('input[name]');
-        //console.log(inputs);
+        let selects = document.querySelectorAll('select[name]');
+        
+        //获取所有输入框的值
         inputs.forEach(item => {
             data[`${item.getAttribute('name')}`] = item.value;
         });
-        console.log(data);
+        //获取所有下拉框的值
+        selects.forEach(item => {
+            data[`${item.getAttribute('name')}`] = item.value;
+        });
+        //获取文本域的值
+        let textarea = document.querySelector('#comment');
+        data[`${textarea.getAttribute('name')}`] = textarea.value;
+
+        //配置ajax对象
         var obj = {
             type: 'post',
             headers: {
+                //表单令牌
                 'X-CSRF-TOKEN': document.querySelector('input[name=_token]').value,
-                //'Content-Type':'application/json',
             },
             url: `{{ url('/user/orderEntry') }}`,
             data:data,
             dataType: 'json',
             success: function(res) {
                 console.log(res);
-                //layer.msg(firstKey(res));
             },
             error: function(res) {
                 console.log('接口出錯！');
